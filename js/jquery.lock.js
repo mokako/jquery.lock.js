@@ -1,3 +1,7 @@
+// jquery.lock.js by syunya kuramoto - http://senpu-ki.com
+// Dual licensed under the MIT and GPL
+
+
 (function($){
 	$.fn.lock = function(options){
 		var doc = document;
