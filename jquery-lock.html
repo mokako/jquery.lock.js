@@ -1,0 +1,190 @@
+<!DOCTYPE html> 
+<html> 
+<head>
+	<meta charset="utf-8" />
+	<link rel="shortcut icon" href="data:image/x-icon;base64,AAABAAEAEBAAAAAAAABoBQAAFgAAACgAAAAQAAAAIAAAAAEACAAAAAAAQAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAA////ADibvAAuSV4AP9b/ADJshgA8vuQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEBAQEBAQEBAQEBAQAAAAABAQEBAQEBAQEBAQEAAAAAAQEBAQEBAQEBAQEBAAAAAAEBAQEBAUFBAQEBAQAAAAABAQEBAQCAgQEBAQEAAAAAAQEBAQEAwMEBAQEBAAAAAAEBAQEBAYGBAQEBAQAAAAABAQEBAQEBAQEBAQEAAAAAAAABAAAAAAAAAQAAAAAAAAAAAQAAAAAAAAEAAAAAAAAAAAEAAAAAAAABAAAAAAAAAAABAAAAAAAAAQAAAAAAAAAAAQAAAAAAAAEAAAAAAAAAAAEBAAAAAAEBAAAAAAAAAAAAAQEBAQEBAAAAAAAAAAAAAAABAQEBAAAAAAAAMADAADAAwAAwAMAAMADAADAAwAAwAMAAMADAADAAwAA9+8AAPfvAAD37wAA9+8AAPfvAADzzwAA+B8AAPw/AAA=" />
+	<meta content="text/javascript" http-equiv="Content-Script-Type" />
+	<link href="css/jquery-lock.css" rel="stylesheet"  type="text/css" />
+ 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js" type="text/javascript"></script>
+ 	<script charset="utf-8" src="js/jquery.lock.js" type="text/javascript"></script>
+	<title>jquery-lock</title>
+</head>
+<body>
+	<header>jQuery-lock.js</header>
+	<div id="top-field">
+		<div id="field0"></div>
+	</div>
+	<section id="content-body">
+		<article id="content">
+			<section id="header"><h2>Documentation & DEMO</h2></section>
+			<section class="area co0">
+				<p>FULL</p>
+				<pre class="pre-left">$(function(){
+  $(".lock").lock({
+    pattern:'n',
+    match : 3,
+    comment : "Please click table",
+    limitCount : 2,
+    tdWidth :100,
+    tdHeight :100,
+    cols : 4,
+    rows : 4,
+    lock : function(){
+      userFunction();
+    },
+    unlock : function(){
+      userFunction();
+    },
+    limit : function(){
+      userFunction();
+    }
+  });
+});</pre>
+				<section id="lock" class="lock"></section>
+<script type="text/javascript">$(function(){
+  $("#lock").lock({
+    pattern:'r',
+    match : 3, // matching
+    comment : "Please click table",
+    limitCount : 2,
+    tdWidth :60,
+    tdHeight :60,
+    cols : 4,
+    rows : 4,
+    unlock : function(){
+    },
+	});
+});</script>				
+			</section>
+			<hr />
+			<blockquote>PATTERN</blockquote>
+			<section class="area co0">
+				<p>pattern : 'n' (number)</p>
+				<pre class="pre-left">$(".lock").lock({
+  <span class="r0">pattern:'n'</span>
+});</pre>
+				<section id="lock0" class="lock"></section>
+				<script type="text/javascript">$("#lock0").lock({pattern : 'n',cols : 4,rows : 1,tdWidth : 60,tdHeight : 60});</script>				
+			</section>
+			<section class="area co0">
+				<p>pattern : 'a' (alphabet)</p>
+				<section id="lock2" class="lock"></section>
+				<pre class="pre-left">$(".lock").lock({
+  <span class="r0">pattern:'a'</span>
+});</pre>
+				<script type="text/javascript">$("#lock2").lock({pattern : 'a',cols : 4,rows : 1,tdWidth : 60,tdHeight : 60});</script>
+			</section>
+			<section class="area co0">
+				<p>pattern : 'r' (random)</p>
+				<section id="lock3" class="lock"></section>
+				<pre class="pre-left">$(".lock").lock({
+  <span class="r0">pattern:'r'</span>
+});</pre>
+				<script type="text/javascript">$("#lock3").lock({pattern : 'r',cols : 4,rows : 1,tdWidth : 60,tdHeight : 60});</script>
+			</section>
+			<hr />	
+			<blockquote>MATCH</blockquote>
+			<section class="area co0">
+				<p>match : (number)</p>
+				<pre class="pre-left">$(".lock").lock({
+  <span class="r0">match : 2</span>
+});</pre>
+				<section id="lock4" class="lock"></section>
+				<script type="text/javascript">$("#lock4").lock({pattern : 'r',cols : 4,rows : 1,tdWidth : 60,tdHeight : 60, match : 2, comment : "press table"});</script>				
+			</section>
+			<hr />	
+			<blockquote>COMMENT</blockquote>
+			<section class="area co0">
+				
+				<p>comment : "character" or false </p>
+				<pre class="pre-left">$(".lock").lock({
+  <span class="r0">comment : "Press table"</span>
+});</pre>
+				<section id="lock5" class="lock"></section>
+				<script type="text/javascript">$("#lock5").lock({pattern : 'r',cols : 4,rows : 1,tdWidth : 60,tdHeight : 60, comment : "press table"});</script>				
+			</section>			
+			<hr />	
+			<blockquote>LIMITCOUNT</blockquote>
+			<section class="area co0">
+				<p>limitCount : 2 (limitCout + match = limit)</p>
+				<pre class="pre-left">$(".lock").lock({
+ <span class="r0">limitCount : 2,</span>
+ <span class="r0">limit : <span class="g0">function()</span>{</span>
+  	$(this).fadeOut("slow");
+  <span class="r0">}</span>
+});</pre>
+				<section id="lock6" class="lock"></section>
+				<script type="text/javascript">$("#lock6").lock({pattern : 'r',cols : 4,rows : 1,tdWidth : 60,tdHeight : 60,   limitCount : 2, limit : function(){$("#lock6").fadeOut("slow");}});</script>				
+			</section>				
+			<hr />	
+			<blockquote>TABLE WIDTH + HEIGHT</blockquote>
+			<section class="area co0">
+				<p>tdWidth , tdHeight</p>
+				<pre class="pre-left">$(".lock").lock({
+  <span class="r0">tdWidth:30,</span>
+  <span class="r0">tdHeight:30</span>
+});</pre>
+				<section id="lock7" class="lock"></section>
+				<script type="text/javascript">$("#lock7").lock({pattern : 'r',cols : 4,rows : 1,tdWidth : 30,tdHeight : 30});</script>				
+			</section>			
+			<hr />	
+			<blockquote>TABLE COLS + ROWS</blockquote>
+			<section class="area co0">
+				<p>cols , rows</p>
+				<pre class="pre-left">$(".lock").lock({
+  <span class="r0">cols:7,</span>
+  <span class="r0">rows:2</span>
+});</pre>
+				<section id="lock8" class="lock"></section>
+				<script type="text/javascript">$("#lock8").lock({pattern : 'r',cols : 7,rows : 2,tdWidth : 30,tdHeight : 30});</script>				
+			</section>		
+			<hr />	
+			<blockquote>LOCK ,UNLOCL ,LIMIT (CALLBACK)</blockquote>
+			<section class="area co0">
+				<p>lock : function(){} , unlock : function(){} , limit : function(){}</p>
+				<pre class="pre-left">$(".lock").lock({
+  <span class="r0">lock : <span class="g0">function()</span>{</span>
+    $(this)
+      .css("background-color","#0074CC");	
+  <span class="r0">}</span>,
+  <span class="r0">unlock : <span class="g0">function()</span>{</span>
+    $(this)
+      .css("background-color","#FFFFFF");
+  <span class="r0">}</span>,
+  <span class="r0">limit : <span class="g0">function()</span>{</span>
+    $(this).fadeOut("slow");
+  <span class="r0">}</span>
+});</pre>
+				<section id="lock9" class="lock"></section>
+				<script type="text/javascript">$("#lock9").lock({pattern : 'r',cols : 7,rows : 2,tdWidth : 30,tdHeight : 30,  lock : function(){$(this).css("background-color","#0074CC");},unlock : function(){$(this).css("background-color","#FFFFFF");},limit : function(){$(this).fadeOut("slow");}});</script>				
+			</section>
+			<hr />	
+			<blockquote class="co3">PRECAUTIONS</blockquote>
+			<section class="area co1">
+				Licensing : Available under the MIT and GPL licenses.<br />
+				Security : The security feature is not available with this plug-in.<br />
+			</section>
+		</article>
+	</section>
+	<div id="download-a"><a href="http://www.senpu-ki.com/">DOWNLOAD</a></div>
+	<div id="top-link"><a href="http://www.senpu-ki.com/">TOP</a></div>
+<script type="text/javascript">
+$(function(){
+	$("#field0").lock({
+			pattern:'n',
+			match : 3, // matching
+			comment : "Please click table",
+			limitCount : 2,
+			tdWidth :100,
+			tdHeight :100,
+			cols : 4,
+			rows : 4,
+			unlock : function(){
+				$("#top-field").fadeOut("slow");
+				$("#content-body").fadeIn("slow");
+			},
+	});
+});
+</script>
+</body>
+</html>
